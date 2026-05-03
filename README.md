@@ -32,3 +32,9 @@
 ```
 https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&t=WjqkpVNRxQKXWTHr-1
 ```
+# Estrutura de Branches DevOps
+-main → produção (código estável)
+-develop → base do desenvolvimento
+-feature/* → cada funcionalidade nova
+-bugfix/* → correções
+-release/* → preparação pra versão
