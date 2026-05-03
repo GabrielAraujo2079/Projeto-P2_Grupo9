@@ -1,8 +1,15 @@
+/*Reset basico no Body */
+* {
+  font-family: 'Roboto', sans-serif; /*Fonte de texto usada no site */
+}
+
 body {
   margin: 0;
   padding-top: 60px;  /*Pra não atras do header */
+  background: #f4f4f4;
 }
 
+/*Parte do header */
 .header {
     position: fixed;
     top: 0;
@@ -13,5 +20,20 @@ body {
     text-align: center;
     color: black; /*Texto preto no header */
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    align-items: center;
+    
 }
+header .icon_logo {
+    height: 60px;
+    width: auto;
+}
+header .img_icon {
+    height: 40px;
+    width: auto;
+}
+/*Fim do Header */
+
+

@@ -20,7 +20,7 @@
 
 ## Fora da Public
 <ul>
-    <li>Readme </li>   
+    <li>Readme</li>   
 </ul>
 
 ### Boas praticas
@@ -28,4 +28,7 @@
 - CSS proprio para atributos especificos de paginas
 - JS proprio para atributos especificos de paginas
 
-
+# Link do Wireframe
+```
+https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&t=WjqkpVNRxQKXWTHr-1
+```
