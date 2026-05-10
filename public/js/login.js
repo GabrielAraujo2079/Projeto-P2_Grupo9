@@ -50,6 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (localStorage.getItem("logado") === "true") {
-    window.location.href = "home.html";
+    window.location.href = "public/index.html";
   }
 });
