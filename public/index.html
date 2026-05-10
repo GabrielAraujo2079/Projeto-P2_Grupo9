@@ -4,32 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--Link do css usado em todas as pags-->
     <link rel="stylesheet" href="css/global.css">
-
     <!--Link do css proprio da pag-->
     <link rel="stylesheet" href="css/home.css">
     <!--Link da fonte de texto usada (Roboto) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <!--Link do icon da guia-->
+    <link rel="icon" href="assets/icons/ui/auto-prime-icon.ico" type="image/png">
     <title>Auto Prime</title>
+    <!--Link do bootsrap de uma barra de pesquisa-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
+        <!-- LOGO -->
         <a href="index.html">
-            <img class="icon_logo" src="" alt="Logo Auto Prime">
+            <img class="icon_logo" src="assets/icons/ui/logo-autoPrime.png" alt="Logo Auto Prime">
         </a>
+        <!-- SEARCH -->
+        <div class="search-bar">
+            <div class="input-group">
+                <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar veículos...">
+                <button class="btn btn-dark">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- LOGIN -->
         <a href="pages/login.html">
             <img class="img_icon" src="assets/icons/ui/user_icon.png" alt="Logar">
         </a>
     </header>
     <div class="page">
         <aside class="sidebar">
-
             <h2>Filtros Gerais</h2>
-
             <!-- Seção Câmbio -->
             <section class="filtro-section">
                 <h3>Câmbio</h3>
@@ -39,7 +50,6 @@
                 <label class="checkbox-item">
                     <input type="checkbox" value="automatico"> Automático
                 </label>
-
             </section>
             <hr>
             <!-- Seção Estado de uso -->
@@ -52,7 +62,6 @@
                         <span class="toggle-slider"></span>
                     </div>
                 </label>
-
                 <label class="toggle-item">
                     <span>Usados</span>
                     <div class="toggle">
@@ -60,11 +69,8 @@
                         <span class="toggle-slider"></span>
                     </div>
                 </label>
-
             </section>
-
             <hr>
-
             <!-- Seção Marca -->
             <section class="filtro-section">
                 <h3>Marca</h3>
@@ -107,13 +113,10 @@
                     </div>
                 </div>
             </section>
-
         </aside>
         <main class="content">
-
             <div class="grid">
-
-                <div class="card">
+                <div class="card" data-name="Honda Civic">
                     <div class="card-img">
                         <img src="assets/images/veiculos/honda-civic.jpg" alt="Honda Civic">
                     </div>
@@ -123,8 +126,7 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Fiat Pulse">
                     <div class="card-img">
                         <img src="assets/images/veiculos/Fiat-Pulse.webp" alt="Fiat Pulse">
                     </div>
@@ -134,19 +136,17 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Volkswagen Polo">
                     <div class="card-img">
                         <img src="assets/images/veiculos/vw-polo.webp" alt="VW Polo">
                     </div>
                     <div class="card-body">
-                        <p class="card-name">VW Polo</p>
+                        <p class="card-name">Volkswagen Polo</p>
                         <p class="card-price"><span>R$</span> 98.700,00</p>
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Chevrolet Onix">
                     <div class="card-img">
                         <img src="assets/images/veiculos/chevrolet-onix.webp" alt="Chevrolet Onix">
                     </div>
@@ -156,8 +156,7 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Renault Kwid">
                     <div class="card-img">
                         <img src="assets/images/veiculos/Renault-Kwid.jpg" alt="Renault Kwid">
                     </div>
@@ -167,10 +166,9 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Hyundai HB20">
                     <div class="card-img">
-                        <img src="assets/images/veiculos/hyundai-hb20.jpg"Hyundai HB20">
+                        <img src="assets/images/veiculos/hyundai-hb20.jpg" alt="Hyundai HB20">
                     </div>
                     <div class="card-body">
                         <p class="card-name">Hyundai HB20</p>
@@ -178,8 +176,7 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Ford Bronco">
                     <div class="card-img">
                         <img src="assets/images/veiculos/ford-bronco.jpg" alt="Ford Bronco">
                     </div>
@@ -189,8 +186,7 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
-                <div class="card">
+                <div class="card" data-name="Peugeot 208">
                     <div class="card-img">
                         <img src="assets/images/veiculos/peugeot-208.jpg" alt="Peugeot 208">
                     </div>
@@ -200,13 +196,10 @@
                         <a href="produto.html" class="btn-comprar">Ver oferta</a>
                     </div>
                 </div>
-
             </div>
-
-
         </main>
     </div>
-
+    <script src="js/pesquisar.js"></script>
 </body>
 
 </html>
