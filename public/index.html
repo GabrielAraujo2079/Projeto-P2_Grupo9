@@ -34,9 +34,15 @@
             </div>
         </div>
         <!-- LOGIN -->
-        <a href="pages/login.html">
-            <img class="img_icon" src="assets/icons/ui/user_icon.png" alt="Logar">
-        </a>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <span id="nomeUsuarioHeader" style="color:#fff; font-size:14px; font-weight:600;"></span>
+            <a href="pages/login.html" id="linkPerfil" style="display:flex; align-items:center; cursor:pointer;">
+                <img class="img_icon" src="assets/icons/ui/user_icon.png" alt="Logar">
+            </a>
+            <button id="btnSair" onclick="sair()"
+                style="display:none; background:#c0392b; color:#fff; border:none; border-radius:8px; padding:6px 14px; cursor:pointer; font-size:13px; font-weight:600;">Sair</button>
+        </div>
+
     </header>
     <div class="page">
         <aside class="sidebar">
@@ -116,7 +122,8 @@
         </aside>
         <main class="content">
             <div class="grid">
-                <div class="card" data-name="Honda Civic" data-cambio="automatico" data-estado="usado" data-marca="Honda">
+                <div class="card" data-name="Honda Civic" data-cambio="automatico" data-estado="usado"
+                    data-marca="Honda">
                     <div class="card-img">
                         <img src="assets/images/veiculos/honda-civic.jpg" alt="Honda Civic">
                     </div>
@@ -128,78 +135,80 @@
                 </div>
                 <div class="card" data-name="Fiat Pulse" data-cambio="automatico" data-estado="novo" data-marca="Fiat">
                     <div class="card-img">
-                    <img src="assets/images/veiculos/Fiat-Pulse.webp" alt="Fiat Pulse">
+                        <img src="assets/images/veiculos/Fiat-Pulse.webp" alt="Fiat Pulse">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Fiat Pulse</p>
+                        <p class="card-price"><span>R$</span> 112.500,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-name">Fiat Pulse</p>
-                    <p class="card-price"><span>R$</span> 112.500,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                <div class="card" data-name="Volkswagen Polo" data-cambio="manual" data-estado="usado"
+                    data-marca="Volkswagen">
+                    <div class="card-img">
+                        <img src="assets/images/veiculos/vw-polo.webp" alt="VW Polo">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Volkswagen Polo</p>
+                        <p class="card-price"><span>R$</span> 98.700,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Chevrolet Onix" data-cambio="manual" data-estado="usado"
+                    data-marca="Chevrolet">
+                    <div class="card-img">
+                        <img src="assets/images/veiculos/chevrolet-onix.webp" alt="Chevrolet Onix">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Chevrolet Onix</p>
+                        <p class="card-price"><span>R$</span> 79.900,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Renault Kwid" data-cambio="manual" data-estado="novo" data-marca="Renault">
+                    <div class="card-img">
+                        <img src="assets/images/veiculos/Renault-Kwid.jpg" alt="Renault Kwid">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Renault Kwid</p>
+                        <p class="card-price"><span>R$</span> 67.400,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Hyundai HB20" data-cambio="manual" data-estado="usado"
+                    data-marca="Hyundai">
+                    <div class="card-img">
+                        <img src="assets/images/veiculos/hyundai-hb20.jpg" alt="Hyundai HB20">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Hyundai HB20</p>
+                        <p class="card-price"><span>R$</span> 83.200,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Ford Bronco" data-cambio="automatico" data-estado="novo" data-marca="Ford">
+                    <div class="card-img">
+                        <img src="assets/images/veiculos/ford-bronco.jpg" alt="Ford Bronco">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Ford Bronco</p>
+                        <p class="card-price"><span>R$</span> 310.000,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Peugeot 208" data-cambio="manual" data-estado="novo" data-marca="Peugeot">
+                    <div class="card-img">
+                        <img src="assets/images/veiculos/peugeot-208.jpg" alt="Peugeot 208">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Peugeot 208</p>
+                        <p class="card-price"><span>R$</span> 94.100,00</p>
+                        <a href="produto.html" class="btn-comprar">Ver oferta</a>
+                    </div>
                 </div>
             </div>
-            <div class="card" data-name="Volkswagen Polo" data-cambio="manual" data-estado="usado" data-marca="Volkswagen">
-                <div class="card-img">
-                    <img src="assets/images/veiculos/vw-polo.webp" alt="VW Polo">
-                </div>
-                <div class="card-body">
-                    <p class="card-name">Volkswagen Polo</p>
-                    <p class="card-price"><span>R$</span> 98.700,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
-                </div>
-            </div>
-            <div class="card" data-name="Chevrolet Onix" data-cambio="manual" data-estado="usado" data-marca="Chevrolet">
-                <div class="card-img">
-                    <img src="assets/images/veiculos/chevrolet-onix.webp" alt="Chevrolet Onix">
-                </div>
-                <div class="card-body">
-                    <p class="card-name">Chevrolet Onix</p>
-                    <p class="card-price"><span>R$</span> 79.900,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
-                </div>
-            </div>
-            <div class="card" data-name="Renault Kwid" data-cambio="manual"data-estado="novo" data-marca="Renault">
-                <div class="card-img">
-                    <img src="assets/images/veiculos/Renault-Kwid.jpg" alt="Renault Kwid">
-                </div>
-                <div class="card-body">
-                    <p class="card-name">Renault Kwid</p>
-                    <p class="card-price"><span>R$</span> 67.400,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
-                </div>
-            </div>
-            <div class="card" data-name="Hyundai HB20" data-cambio="manual" data-estado="usado" data-marca="Hyundai">
-                <div class="card-img">
-                    <img src="assets/images/veiculos/hyundai-hb20.jpg" alt="Hyundai HB20">
-                </div>
-                <div class="card-body">
-                    <p class="card-name">Hyundai HB20</p>
-                    <p class="card-price"><span>R$</span> 83.200,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
-                </div>
-            </div>
-            <div class="card" data-name="Ford Bronco" data-cambio="automatico" data-estado="novo" data-marca="Ford">
-                <div class="card-img">
-                    <img src="assets/images/veiculos/ford-bronco.jpg" alt="Ford Bronco">
-                </div>
-                <div class="card-body">
-                    <p class="card-name">Ford Bronco</p>
-                    <p class="card-price"><span>R$</span> 310.000,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
-                </div>
-            </div>
-            <div class="card" data-name="Peugeot 208" data-cambio="manual" data-estado="novo" data-marca="Peugeot">
-                <div class="card-img">
-                    <img src="assets/images/veiculos/peugeot-208.jpg" alt="Peugeot 208">
-                </div>
-                <div class="card-body">
-                    <p class="card-name">Peugeot 208</p>
-                    <p class="card-price"><span>R$</span> 94.100,00</p>
-                    <a href="produto.html" class="btn-comprar">Ver oferta</a>
-                </div>
-            </div>
-    </div>
-    </main>
-    </div>
-    <script src="js/home.js"></script>
+            <script src="js/home.js"></script>
+
 </body>
 
 </html>

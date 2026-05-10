@@ -56,7 +56,8 @@ function cadastrar() {
   // Feedback e redireciona
   sucessoEl.textContent = "Conta criada com sucesso! Redirecionando...";
   setTimeout(() => {
-    window.location.href = "login.html";
+    window.location.href = "../pages/login.html";
+
   }, 1500);
 }
 
