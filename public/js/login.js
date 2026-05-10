@@ -9,6 +9,7 @@ const admins = [
   { nomeCompleto: "João Vendedor", usuario: "joao",  senha: "joao123", perfil: "vendedor"     }
 ];
 
+
 function logar() {
   const usuarioDigitado = document.getElementById("usuario").value.trim();
   const senhaDigitada   = document.getElementById("senha").value;
