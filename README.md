@@ -5,7 +5,6 @@
   <h4>Paulo Vitor Macieira Carvalho RA: 2508725</h4>
   
 
-
 # Tema
 <h4>Loja de venda de veiculos</h4>
 
