@@ -33,10 +33,15 @@
                 </button>
             </div>
         </div>
-        <!-- LOGIN -->
-        <a href="pages/login.html">
-            <img class="img_icon" src="assets/icons/ui/user_icon.png" alt="Logar">
-        </a>
+            <!-- LOGIN -->
+        <div style="display:flex; align-items:center; gap:12px;">
+    <span id="nomeUsuarioHeader" style="color:#fff; font-size:14px; font-weight:600;"></span>
+    <a href="pages/login.html" id="linkPerfil" style="display:flex; align-items:center; cursor:pointer;">
+        <img class="img_icon" src="assets/icons/ui/user_icon.png" alt="Logar">
+    </a>
+    <button id="btnSair" onclick="sair()" style="display:none; background:#c0392b; color:#fff; border:none; border-radius:8px; padding:6px 14px; cursor:pointer; font-size:13px; font-weight:600;">Sair</button>
+    </div>
+
     </header>
     <div class="page">
         <aside class="sidebar">
@@ -108,7 +113,7 @@
                         <span>Ford</span>
                     </div>
                     <div class="marca-item">
-                        <img src="assets/icons/marcas/hyundai-logo.png" alt="Hyundai">
+                        <img src="assets/icons/marcas/hyundai-Logo.png" alt="Hyundai">
                         <span>Hyundai</span>
                     </div>
                 </div>
@@ -200,6 +205,27 @@
         </main>
     </div>
     <script src="js/pesquisar.js"></script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const logado = localStorage.getItem("logado") === "true";
+    const nome = localStorage.getItem("usuarioLogin");
+
+    if (logado && nome) {
+      document.getElementById("nomeUsuarioHeader").textContent = "Olá, " + nome + "!";
+      document.getElementById("linkPerfil").href = "#"; // já logado, não vai pro login
+      document.getElementById("btnSair").style.display = "block";
+    }
+  });
+
+  function sair() {
+    localStorage.removeItem("logado");
+    localStorage.removeItem("usuarioLogin");
+    localStorage.removeItem("usuarioPerfil");
+    window.location.href = "pages/login.html";
+  }
+</script>
+
 </body>
 
 </html>

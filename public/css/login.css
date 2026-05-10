@@ -253,6 +253,7 @@ body {
 }
 
 .link-cadastro a:hover {
+  color: #006878;
   text-decoration: underline;
 }
 

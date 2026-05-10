@@ -35,7 +35,7 @@ function logar() {
     localStorage.setItem("usuarioLogin", encontrado.usuario);
     localStorage.setItem("usuarioPerfil", encontrado.perfil);
 
-    window.location.href = "home.html";
+    window.location.href = "../index.html";
   } else {
     erroEl.textContent = "Usuário ou senha inválidos.";
     document.getElementById("senha").value = "";
@@ -50,6 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (localStorage.getItem("logado") === "true") {
-    window.location.href = "public/index.html";
+    window.location.href = "../index.html";
   }
 });
