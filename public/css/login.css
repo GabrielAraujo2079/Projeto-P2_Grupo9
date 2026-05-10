@@ -237,22 +237,7 @@ body {
   font-size: 64px;
 }
 
-/* ---------- RESPONSIVO ---------- */
-@media (max-width: 680px) {
-  .login-card {
-    flex-direction: column;
-  }
-
-  .image-side {
-    width: 100%;
-    height: 200px;
-  }
-
-  .form-side {
-    padding: 32px 24px;
-  }
-
-  .link-cadastro {
+.link-cadastro {
   padding-top: 32px;
   font-size: 13px;
   color: #444;
@@ -270,5 +255,22 @@ body {
 .link-cadastro a:hover {
   text-decoration: underline;
 }
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 680px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .image-side {
+    width: 100%;
+    height: 200px;
+  }
+
+  .form-side {
+    padding: 32px 24px;
+  }
+
+  
 
 }
