@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | AutoPrime</title>
+  <link rel="stylesheet" href="/public/css/login.css">
+  <link rel="stylesheet" href="/public/css/cadastro.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="logo-circle">🚗</div>
+      <div class="brand-text">
+        <span class="brand-name">AutoPrime</span>
+        <span class="brand-slogan">SEU CARRO IDEAL</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <div class="cadastro-card">
+
+      <div class="user-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="#222" stroke-width="3">
+          <circle cx="40" cy="28" r="16"/>
+          <path d="M10 72c0-16 13.4-28 30-28s30 12 30 28"/>
+          <!-- ícone de "+" para indicar novo cadastro -->
+          <line x1="62" y1="10" x2="62" y2="22"/>
+          <line x1="56" y1="16" x2="68" y2="16"/>
+        </svg>
+      </div>
+
+      <h1 class="login-title">Criar Conta</h1>
+
+      <div class="form-group">
+        <input type="text" id="usuario" placeholder="Nome de usuário:">
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder="E-mail:">
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="senha" placeholder="Senha:">
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="confirmarSenha" placeholder="Confirmar senha:">
+      </div>
+
+      <p id="erro" class="erro-msg"></p>
+      <p id="sucesso" class="sucesso-msg"></p>
+
+      <button class="btn-entrar" onclick="cadastrar()">Cadastrar</button>
+
+      <p class="link-login">Já tem conta? <a href="login.html">Fazer login</a></p>
+
+    </div>
+  </main>
+
+  <script src="public/js/cadastro.js"></script>
+</body>
+</html>
