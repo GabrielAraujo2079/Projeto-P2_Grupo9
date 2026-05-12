@@ -3,6 +3,7 @@
   <h4>Gabriel Araujo Santos RA: 2508678</h4>
   <h4>Paulo André Silva de Lima RA: 2512630</h4>
   <h4>Paulo Vitor Macieira Carvalho RA: 2508725</h4>
+  <h4>Leonardo da Graça Moraes RA: 2512238</h4>
   
 
 
