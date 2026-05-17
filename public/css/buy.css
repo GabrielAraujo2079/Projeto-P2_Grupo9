@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(135deg, #b2d8dc 0%, #8ecdd4 40%, #5db8c2 100%);
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+
+.buy-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* CARD */
+
+.buy-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+
+    border-radius: 18px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+
+/* IMAGEM */
+
+.buy-image {
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.buy-image img {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* INFO */
+
+.buy-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-info h1 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.buy-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #006878;
+    margin-bottom: 30px;
+}
+
+/* ESPECIFICAÇÕES */
+
+.specs h2,
+.payment-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    color: #222;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.spec-item {
+    background: #f4f4f4;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.spec-item span {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.spec-item strong {
+    color: #111;
+}
+
+/* PAGAMENTO */
+
+.payment-section {
+    margin-bottom: 30px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #f4f4f4;
+
+    padding: 14px;
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.payment-option:hover {
+    background: #e7e7e7;
+}
+
+/* BOTÃO */
+
+.btn-buy {
+    border: none;
+
+    background: #006878;
+
+    color: #fff;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-buy:hover {
+    background: #005461;
+}
+
+/* MENSAGEM */
+
+.success-message {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .buy-card {
+        grid-template-columns: 1fr;
+    }
+
+    .buy-info {
+        padding: 28px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
