@@ -40,9 +40,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Instala dependências
-        run: npm install --omit=dev
-
       - name: Deploy para Azure App Service
         uses: azure/webapps-deploy@v3
         with:
