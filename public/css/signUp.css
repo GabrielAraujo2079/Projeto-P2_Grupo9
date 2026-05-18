@@ -1,0 +1,150 @@
+/* ============================================================
+   AutoPrime — Tela de Cadastro
+   Independente do login.css
+   Depende apenas de: global.css
+   ============================================================ */
+
+/* ---------- BODY ---------- */
+body {
+  background: linear-gradient(135deg, #b2d8dc 0%, #8ecdd4 40%, #5db8c2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- MAIN ---------- */
+.main-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ---------- CARD ---------- */
+.cadastro-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- ÍCONE ---------- */
+.user-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.user-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- TÍTULO ---------- */
+.login-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+.form-group {
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 12px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #006878;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.form-group input:focus {
+  background-color: #005461;
+  box-shadow: 0 0 0 2px #F5C518;
+}
+
+/* ---------- MENSAGENS ---------- */
+.erro-msg {
+  color: #c0392b;
+  font-size: 13px;
+  min-height: 20px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.sucesso-msg {
+  color: #27ae60;
+  font-size: 13px;
+  min-height: 20px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* ---------- BOTÃO ---------- */
+.btn-entrar {
+  width: 100%;
+  max-width: 260px;
+  padding: 11px;
+  border: none;
+  border-radius: 30px;
+  background-color: #006878;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-entrar:hover {
+  background-color: #005461;
+}
+
+.btn-entrar:active {
+  transform: scale(0.98);
+}
+
+/* ---------- LINK LOGIN ---------- */
+.link-login {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #444;
+}
+
+.link-login a {
+  color: #006878;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-login a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 680px) {
+  .cadastro-card {
+    padding: 32px 24px;
+  }
+}
