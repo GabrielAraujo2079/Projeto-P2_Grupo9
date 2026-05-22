@@ -1,0 +1,66 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  sonar:
+    name: CI - SonarQube
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instala dependências
+        run: npm install
+
+      - name: Análise SonarQube
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+  deploy:
+    name: CD - Deploy Azure
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instala dependências
+        run: npm install
+
+      - name: Deploy para Azure
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: .
+
+  e2e:
+    name: E2E - Cypress em Produção
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Roda testes Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          config: baseUrl=https://autoprime-app-grupo9.azurewebsites.net
