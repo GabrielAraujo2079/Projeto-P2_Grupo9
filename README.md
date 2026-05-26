@@ -38,6 +38,8 @@ https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&
 - feature/* → cada funcionalidade nova
 - bugfix/* → correções
 - release/* → preparação pra versão
+<<<<<<< HEAD
+=======
 
 ## Como funciona o projeto
 1. Feature nova PR pra develop
@@ -45,3 +47,4 @@ https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&
 3. Develop -> Main
 4. Teste E2E em produçao
   
+>>>>>>> origin/develop
