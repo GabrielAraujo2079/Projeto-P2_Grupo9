@@ -46,5 +46,10 @@ https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&
 2. No meio do PR entre feature e develop vai rolar o teste do sonarqube
 3. Develop -> Main
 4. Teste E2E em produçao
-  
->>>>>>> origin/develop
+
+
+
+# Link do site
+```
+https://autoprime-app-grupo9.azurewebsites.net/
+```
