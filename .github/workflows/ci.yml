@@ -1,16 +1,14 @@
 name: CI/CD Pipeline
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [develop]
+    branches: [develop, main]
 
 jobs:
   sonar:
     name: CI - SonarQube
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.base_ref == 'develop'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,7 +31,7 @@ jobs:
   deploy:
     name: CD - Deploy Azure
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.base_ref == 'main'
     steps:
       - uses: actions/checkout@v4
 
@@ -56,7 +54,7 @@ jobs:
     name: E2E - Cypress em Produção
     runs-on: ubuntu-latest
     needs: deploy
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.base_ref == 'main'
     steps:
       - uses: actions/checkout@v4
 
