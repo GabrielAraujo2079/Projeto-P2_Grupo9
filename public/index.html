@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Teste CI2-->>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link do css usado em todas as pags!!!-->
+    <link rel="stylesheet" href="css/global.css">
+    <!--Link do css proprio da pag-->
+    <link rel="stylesheet" href="css/home.css">
+    <!--Link da fonte de texto usada (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--Link do icon da guia-->
+    <link rel="icon" href="assets/icons/ui/auto-prime-icon.ico" type="image/png">
+    <title>Auto Prime</title>
+    <!--Link do bootsrap de uma barra de pesquisa-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <!-- LOGO -->
+        <a href="index.html">
+            <img class="icon_logo" src="assets/icons/ui/logo-autoPrime.png" alt="Logo Auto Prime">
+        </a>
+        <!-- SEARCH -->
+        <div class="search-bar">
+            <div class="input-group">
+                <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar veículos...">
+                <button class="btn btn-dark">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- LOGIN -->
+        <div style="display:flex; align-items:center; gap:12px;">
+            <span id="nomeUsuarioHeader" style="color:#fff; font-size:14px; font-weight:600;"></span>
+            <a href="pages/login.html" id="linkPerfil" style="display:flex; align-items:center; cursor:pointer;">
+                <img class="img_icon" src="assets/icons/ui/user_icon.png" alt="Logar">
+            </a>
+            <button id="btnSair" onclick="sair()"
+                style="display:none; background:#c0392b; color:#fff; border:none; border-radius:8px; padding:6px 14px; cursor:pointer; font-size:13px; font-weight:600;">Sair</button>
+        </div>
+
+    </header>
+    <div class="page">
+        <aside class="sidebar">
+            <h2>Filtros Gerais</h2>
+            <!-- Seção Câmbio -->
+            <section class="filtro-section">
+                <h3>Câmbio</h3>
+                <label class="checkbox-item">
+                    <input type="checkbox" value="manual"> Manual
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" value="automatico"> Automático
+                </label>
+            </section>
+            <hr>
+            <!-- Seção Estado de uso -->
+            <section class="filtro-section">
+                <h3>Estado de uso</h3>
+                <label class="toggle-item">
+                    <span>Novos</span>
+                    <div class="toggle">
+                        <input type="checkbox" value="novo">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
+                <label class="toggle-item">
+                    <span>Usados</span>
+                    <div class="toggle">
+                        <input type="checkbox" value="usado">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
+            </section>
+            <hr>
+            <!-- Seção Marca -->
+            <section class="filtro-section">
+                <h3>Marca</h3>
+                <div class="marcas-grid">
+                    <div class="marca-item" data-marca="Chevrolet">
+                        <img src="assets/icons/brands/chevrolet-logo.png" alt="Chevrolet">
+                        <span>Chevrolet</span>
+                    </div>
+                    <div class="marca-item" data-marca="Honda">
+                        <img src="assets/icons/brands/honda-logo.png" alt="Honda">
+                        <span>Honda</span>
+                    </div>
+                    <div class="marca-item" data-marca="Fiat">
+                        <img src="assets/icons/brands/fiat-logo.png" alt="Fiat">
+                        <span>Fiat</span>
+                    </div>
+                    <div class="marca-item" data-marca="Volkswagen">
+                        <img src="assets/icons/brands/volkswagen-logo.png" alt="Volkswagen">
+                        <span>Volkswagen</span>
+                    </div>
+                    <div class="marca-item" data-marca="Renault">
+                        <img src="assets/icons/brands/renault-logo.png" alt="Renault">
+                        <span>Renault</span>
+                    </div>
+                    <div class="marca-item" data-marca="Peugeot">
+                        <img src="assets/icons/brands/peugeot-logo.png" alt="Peugeot">
+                        <span>Peugeot</span>
+                    </div>
+                    <div class="marca-item" data-marca="Citroen">
+                        <img src="assets/icons/brands/citroen-logo.png" alt="Citroen">
+                        <span>Citroen</span>
+                    </div>
+                    <div class="marca-item" data-marca="Ford">
+                        <img src="assets/icons/brands/ford-logo.svg" alt="Ford">
+                        <span>Ford</span>
+                    </div>
+                    <div class="marca-item" data-marca="Hyundai">
+                        <img src="assets/icons/brands/hyundai-logo.png" alt="Hyundai">
+                        <span>Hyundai</span>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <main class="content">
+            <div class="grid">
+                <div class="card" data-name="Honda Civic" data-cambio="automatico" data-estado="usado"
+                    data-marca="Honda">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/honda-civic.jpg" alt="Honda Civic">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Honda Civic</p>
+                        <p class="card-price"><span>R$</span> 89.900,00</p>
+                        <a href="pages/buy.html?nome=Honda%20Civic&preco=89.900,00&img=../assets/images/vehicles/honda-civic.jpg&motor=2.0%20Flex&cambio=Autom%C3%A1tico%20CVT&ano=2023&km=18.000%20km&potencia=155cv&combustivel=Flex" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Fiat Pulse" data-cambio="automatico" data-estado="novo" data-marca="Fiat">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/Fiat-Pulse.webp" alt="Fiat Pulse">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Fiat Pulse</p>
+                        <p class="card-price"><span>R$</span> 112.500,00</p>
+                        <a href="pages/buy.html?nome=Fiat%20Pulse&preco=112.500,00&img=../assets/images/vehicles/Fiat-Pulse.webp&motor=1.0%20Turbo&cambio=Autom%C3%A1tico&ano=2027&km=0%20km&potencia=130cv&combustivel=Flex" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Volkswagen Polo" data-cambio="manual" data-estado="usado"
+                    data-marca="Volkswagen">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/vw-polo.webp" alt="VW Polo">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Volkswagen Polo</p>
+                        <p class="card-price"><span>R$</span> 98.700,00</p>
+                        <a href="pages/buy.html?nome=Volkswagen%20Polo&preco=98.700,00&img=../assets/images/vehicles/vw-polo.webp&motor=1.0%20TSI&cambio=Manual&ano=2021&km=42.000%20km&potencia=116cv&combustivel=Gasolina" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Chevrolet Onix" data-cambio="manual" data-estado="usado"
+                    data-marca="Chevrolet">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/chevrolet-onix.webp" alt="Chevrolet Onix">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Chevrolet Onix</p>
+                        <p class="card-price"><span>R$</span> 79.900,00</p>
+                        <a href="pages/buy.html?nome=Chevrolet%20Onix&preco=79.900,00&img=../assets/images/vehicles/chevrolet-onix.webp&motor=1.0%20Flex&cambio=Manual&ano=2022&km=35.000%20km&potencia=80cv&combustivel=Flex" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Renault Kwid" data-cambio="manual" data-estado="novo" data-marca="Renault">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/Renault-Kwid.jpg" alt="Renault Kwid">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Renault Kwid</p>
+                        <p class="card-price"><span>R$</span> 67.400,00</p>
+                        <a href="pages/buy.html?nome=Renault%20Kwid&preco=67.400,00&img=../assets/images/vehicles/Renault-Kwid.jpg&motor=1.0%20Flex&cambio=Manual&ano=2027&km=0%20km&potencia=80cv&combustivel=Flex" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Hyundai HB20" data-cambio="manual" data-estado="usado"
+                    data-marca="Hyundai">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/hyundai-hb20.jpg" alt="Hyundai HB20">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Hyundai HB20</p>
+                        <p class="card-price"><span>R$</span> 83.200,00</p>
+                        <a href="pages/buy.html?nome=Hyundai%20HB20&preco=83.200,00&img=../assets/images/vehicles/hyundai-hb20.jpg&motor=1.0%20Turbo&cambio=Manual&ano=2020&km=55.000%20km&potencia=120cv&combustivel=Flex" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Ford Bronco" data-cambio="automatico" data-estado="novo" data-marca="Ford">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/ford-bronco.jpg" alt="Ford Bronco">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Ford Bronco</p>
+                        <p class="card-price"><span>R$</span> 310.000,00</p>
+                        <a href="pages/buy.html?nome=Ford%20Bronco&preco=310.000,00&img=../assets/images/vehicles/ford-bronco.jpg&motor=2.7%20V6&cambio=Autom%C3%A1tico&ano=2027&km=0%20km&potencia=330cv&combustivel=Gasolina" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+                <div class="card" data-name="Peugeot 208" data-cambio="manual" data-estado="novo" data-marca="Peugeot">
+                    <div class="card-img">
+                        <img src="assets/images/vehicles/peugeot-208.jpg" alt="Peugeot 208">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-name">Peugeot 208</p>
+                        <p class="card-price"><span>R$</span> 94.100,00</p>
+                        <a href="pages/buy.html?nome=Peugeot%20208&preco=94.100,00&img=../assets/images/vehicles/peugeot-208.jpg&motor=1.6%20Flex&cambio=Manual&ano=2027&km=0%20km&potencia=122cv&combustivel=Flex" class="btn-comprar">Ver oferta</a>
+                    </div>
+                </div>
+            </div>
+            <script src="js/home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | AutoPrime</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+  <!-- Header global -->
+  <header class="header">
+    <img src="../assets/icons/ui/logo-autoPrime.png" alt="AutoPrime" class="icon_logo">
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-container">
+    <div class="login-card">
+
+      <!-- Lado Esquerdo: Formulário -->
+      <div class="form-side">
+        <div class="user-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="#222" stroke-width="3">
+            <circle cx="40" cy="28" r="16"/>
+            <path d="M10 72c0-16 13.4-28 30-28s30 12 30 28"/>
+          </svg>
+        </div>
+
+        <h1 class="login-title">Login</h1>
+
+        <div class="form-group">
+          <input type="text" id="usuario" placeholder="Nome:" autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="senha" placeholder="Senha:" autocomplete="current-password">
+        </div>
+
+        <p id="erro" class="erro-msg"></p>
+
+        <button class="btn-entrar" onclick="logar()">Entrar</button>
+
+        <p class="link-cadastro">Não tem conta? <a href="signUp.html">Criar conta</a></p>
+      </div>
+
+      <!-- Lado Direito: Imagem com overlay de marca -->
+      <div class="image-side">
+        <div class="image-brand">
+          <img src="../assets/icons/ui/logo-autoPrime.png" alt="AutoPrime" class="brand-logo-img">
+        </div>
+        <img src="img/carros.jpg" alt="Carros AutoPrime" class="car-image"
+             onerror="this.style.display='none'; document.getElementById('imgFallback').style.display='flex'">
+        <div class="img-fallback" id="imgFallback">
+          <span>🚙</span>
+          <p>Seu Carro Ideal</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>
