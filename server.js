@@ -13,5 +13,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`AutoPrime rodando na porta ${PORT}`);
+    console.log(`AutoPrime rodando na porta http://localhost:${PORT}`);
 });
