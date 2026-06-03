@@ -5,31 +5,47 @@
   <h4>Paulo Vitor Macieira Carvalho RA: 2508725</h4>
   <h4>Leonardo da Graça Moraes RA: 2512238</h4>
   
+# Link do site
+```
+https://autoprime-app-grupo9.azurewebsites.net/
+```
 
 # Tema
 <h4>Loja de venda de veiculos</h4>
 
+# Fluxo do projeto
+<img src="docs/fluxo-projeto.png" alt="Fluxo do projeto">
+
 # Estrutura do projeto
 
 ## Public
-<ul>
-    <li>Assets -> Tudo que não e codigo </li>   
-    <li>JS -> JavaScript do site</li>
-    <li>CSS -> estilo do site </li>
-    <li>Index -> Pagina principal </li>
-</ul>
+- Assets -> imagens, ícones e outros arquivos estáticos
+- Pages -> páginas do site (login, signUp, buy)
+- JS -> JavaScript das páginas
+- CSS -> estilos do site
+- index.html -> página principal
 
-## Fora da Public
-<ul>
-    <li>Readme</li>   
-</ul>
+## Raiz do Projeto
+- server.js -> servidor Node/Express
+- package.json -> dependências
+- cypress.config.js -> configuração de testes E2E
+- sonar-project.properties -> configuração SonarQube
+- README.md -> este arquivo
 
-### Boas praticas
-- CSS global padrão
-- CSS proprio para atributos especificos de paginas
-- JS proprio para atributos especificos de paginas
+## Cypress
+- e2e/ -> testes end-to-end
+- fixtures/ -> dados de teste
+- support/ -> helpers e configurações
+
+### Boas Práticas
+- CSS global padrão que herda pra todas as páginas
+- CSS próprio para cada página (responsivo e específico)
+- JS próprio para cada página (não poluem o escopo global)
+- Fonte Roboto (pega automaticamente do global.css)
 
 # Link do Wireframe
+<h4>wireframe alta fidelidade</h4>
+
 ```
 https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&t=WjqkpVNRxQKXWTHr-1
 ```
@@ -48,9 +64,13 @@ https://www.figma.com/design/rvlKbO0Irhl70Mqbs2ljkR/Sem-t%C3%ADtulo?node-id=0-1&
 3. Develop -> Main
 4. Teste E2E em produçao
 
-
-
-# Link do site
-```
-https://autoprime-app-grupo9.azurewebsites.net/
-```
+# Feramentas utilizadas
+- Sonarqube
+- Git/Github/Github Actions
+- HTML
+- CSS
+- NODE 
+- Express
+- Bootstrap
+- Cypress
+- Azure
