@@ -163,14 +163,12 @@ hr {
 }
 
 .card-name {
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 .card-price {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #000000;
@@ -189,7 +187,6 @@ hr {
   text-align: center;
   background: #00b7b5;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
