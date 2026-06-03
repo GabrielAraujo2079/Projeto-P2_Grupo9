@@ -76,6 +76,7 @@ body {
   font-size: 14px;
   outline: none;
   transition: background 0.2s;
+  box-sizing: border-box;
 }
 
 .form-group input::placeholder {
@@ -114,9 +115,10 @@ body {
 }
 
 .btn-entrar {
+  display: block;
   width: 100%;
   max-width: 260px;
-  padding: 11px;
+  padding: 11px 16px;
   border: none;
   border-radius: 30px;
   background-color: #006878;
@@ -124,8 +126,9 @@ body {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 8px;
+  margin: 8px auto 0;
   transition: background 0.2s, transform 0.1s;
+  box-sizing: border-box;
 }
 
 .btn-entrar:hover {

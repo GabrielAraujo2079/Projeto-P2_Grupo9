@@ -1,0 +1,39 @@
+name: CD - Deploy Azure
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy Azure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instala dependências
+        run: npm install
+
+      - name: Deploy para Azure
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: .
+
+  e2e:
+    name: Testes Cypress
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Roda testes Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          config: baseUrl=https://autoprime-app-grupo9.azurewebsites.net
